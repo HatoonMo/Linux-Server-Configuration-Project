@@ -335,6 +335,23 @@ application.secret_key = "---"
  - `sudo service apache2 restart`.
  - open in browser [http://35.159.41.242.xip.io](http://35.159.41.242.xip.io).
  
+ ## edit after first review 
+ - prohibiting log in as `root` remotely.
+``    
+ PermitRootLogin prohibit-password 
+  `` 
+    `` 
+ ProhibitRootLogin no
+ `` 
+ - check everything is up to date 
+	 - fixed the problem of some packages not updated and the MOTD (Message Of The Day) stating that there are some packages that need to be installed even after running `sudu apt-get update `and `sudo apt-get upgrade`
+	 - running these commands fixed it 
+```
+sudo apt-get aptitude 
+sudo aptitude update
+sudo aptitude safe-upgrade
+```
+
  ## Helpful Resources
 - [boisalai](https://github.com/boisalai)/[udacity-linux-server-configuration](https://github.com/boisalai/udacity-linux-server-configuration)
 - [iliketomatoes/linux_server_configuration](https://github.com/iliketomatoes/linux_server_configuration)
