@@ -337,8 +337,9 @@ application.secret_key = "---"
  
  ## edit after first review 
  - prohibiting log in as `root` remotely.
+ - use this command `sudo nano /etc/ssh/sshd_config` to change these lines to no
 ``    
- PermitRootLogin prohibit-password 
+ PermitRootLogin no 
   `` 
     `` 
  ProhibitRootLogin no
